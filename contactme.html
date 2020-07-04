@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>My Contact Details</h1>
+    <hr size="3" noshade />
+    <p>
+      Jagamara, Barabari, Near Khandagiri <br />
+      Phone: <em>+91-8260808001</em> <br />
+      Email: <em>ramanandasamantaray@gmail.com</em>
+    </p>
+    <hr />
+    <!--With "mailto" we can send information to our Email-->
+    <!--With enctype (encodetype) no extra symbol will be added in the text message-->
+    <form
+      action="mailto:ramanandasamantaray@gmail.com"
+      method="POST"
+      enctype="text/plain"
+    >
+      <label>Your Name: </label>
+      <input type="text" name="Name" /><br />
+      <label>Email: </label>
+      <input type="email" name="Email" /><br />
+      <label>Your Message:</label><br />
+      <textarea name="Message" cols="30" rows="10"></textarea><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
