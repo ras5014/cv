@@ -11047,3 +11047,32 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.silky-gradient {
+  background-size: 200% 200%;
+  background-image: linear-gradient(45deg, #C9FFBF, #FFAFBD, #C9FFBF);
+  animation: gradientAnimation 15s infinite;
+}
+.gradient-text {
+  background-image: linear-gradient(to right, #610C9F, #940B92, #E95793);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-border {
+  border-width: 8px;
+  border-image: linear-gradient(to right, #8FBC8F, #3D59AB, #8A2BE2);
+  border-image-slice: 1;
+}
