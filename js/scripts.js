@@ -7,6 +7,8 @@
 // Scripts
 // 
 
+
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -52,3 +54,17 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+// Adding Mouse pointer movements of the background
+document.addEventListener('mousemove', function(event) {
+    const x = event.clientX / window.innerWidth;
+    const y = event.clientY / window.innerHeight;
+
+    // Calculate the angle for the gradient based on mouse position
+    const angle = Math.atan2(y - 0.5, x - 0.5) * 180 / Math.PI;
+
+    // Apply this angle to the gradient's direction.
+    const gradientElem = document.querySelector('.silky-gradient');
+    gradientElem.style.backgroundImage = `linear-gradient(${angle}deg, #FFAFBD, #C9FFBF, #FFAFBD)`;
+});
+
