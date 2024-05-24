@@ -11047,3 +11047,33 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+.avatar {
+  margin-top: 100px;
+  margin-bottom: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #2C3E50;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: inset(-100vw 0 0 0 round 50%);
+  border: 6px solid rgb(234, 234, 234);
+}
+
+.avatar img {
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.avatar:hover img {
+  transform: translate(-50%, -50%) scale(1.6);
+}
